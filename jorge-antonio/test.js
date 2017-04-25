@@ -20,3 +20,14 @@ describe('hash', function(){
   });
 });
 
+describe('apiRequest', function(){
+   it('returns proper response', function(done){
+      var fs = require('fs');
+      var expectedResponse = JSON.parse(fs.readFileSync('response.json', 'utf8'));
+      marvel.apiRequest(987, function(res){
+         assert.deepEqual(expectedResponse, res);
+         done();
+      });
+   });
+});
+

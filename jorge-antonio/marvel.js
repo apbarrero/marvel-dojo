@@ -19,6 +19,11 @@ function hashUrl(ts)
    return md5(ts+publicKey+privateKey);
 }
 
+function apiRequest(ts, cb)
+{
+   cb({not: 'implemented'});
+}
+
 function main()
 {
    console.log('bar');
@@ -27,4 +32,4 @@ function main()
 if (!module.parent)
    main();
 
-module.exports = {createUrl, hashUrl, publicKey, privateKey};
+module.exports = {createUrl, hashUrl, apiRequest, publicKey, privateKey};
