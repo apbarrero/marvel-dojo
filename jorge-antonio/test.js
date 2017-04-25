@@ -16,7 +16,7 @@ describe('createUrl', function(){
 describe('hash', function(){
   it('returns proper hash', function(){
     const now = 42;
-    assert.equal('2d6f33ba9932b7bda649e53cf1fbad90', marvel.hashUrl(now));
+    assert.equal('e9dc856afea54c52784e253c4b7c58b4', marvel.hashUrl(now));
   });
 });
 
